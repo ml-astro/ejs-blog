@@ -1,0 +1,10 @@
+<%- include('partials/header'); -%>
+<h1>Домашняя страница</h1>
+<p> <%= homeContent %></p>
+<% postList.forEach(post => { %>
+  <h2><%= post.title %></h2>
+  <p><%= post.body.substring(0,100) %>...
+    <a href="/posts/<%= post.title %>">Читать</a>
+  </p>
+<% }); %>
+<%- include('partials/footer'); -%>
